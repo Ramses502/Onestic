@@ -1,6 +1,4 @@
 from fastapi import FastAPI
-from csvkit.utilities.csvsql import CSVSQL
-import pandas as pd
 import csv, operator
 
 app = FastAPI()
@@ -35,7 +33,7 @@ def report1():
         costOfOrder = 0
     writeCSV(1, arrayIDsOrders, tableResult)
 
-    return "CSV generated"
+    return "order_prices.csv generated"
 
 @app.get("/report2")
 def report2():
@@ -59,7 +57,7 @@ def report2():
         
     writeCSV(2, "", tableResult)
     
-    return "CSV generated"
+    return "product_customers.csv generated"
 
 @app.get("/report3")
 def report3():
@@ -94,16 +92,9 @@ def report3():
 
     writeCSV(3, customersTable, tableResult)
 
-    return "CSV generated"
+    return "customer_ranking.csv generated"
 
 #FUNCTIONS ------------------------------------------------------------------------------------------------------
-
-
-def getProductById(productId, products):
-    for p in products:
-        if p['id'] == productId:
-            product = p
-    return product
 
 def csvtable(file):     # Read CSV file into 2-D dictionary
     table = {}
