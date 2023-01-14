@@ -1,25 +1,25 @@
 # Instalación
 
-Lo primero de todo es tener una versión de Python instalada en nuestra máquina. Puedes encontrar una aquí https://www.python.org/downloads/
-En una terminal, nos situamos en la carpeta del proyecto en el que vamos a trabajar. Seguidamente, introducimos los siguientes comandos:
+Lo primero de todo es tener una versión de Python instalada en nuestra máquina. Puedes encontrar una aquí https://www.python.org/downloads/<br>
+En una terminal, nos situamos en la carpeta del proyecto en el que vamos a trabajar. Seguidamente, introducimos los siguientes comandos:<br>
 `pip install fastapi`<br>
 `pip install uvicorn`<br>
 Estos instalarán las librerías que se han utilizado para la API REST del proyecto.
 
 # Ejecución
 
-Para ello, lo primero que tenemos que hacer es lanzar la API REST. Para hacer esto, en una terminal nos situamos en la carpeta del proyecto y escribimos los comandos:
+Para ello, lo primero que tenemos que hacer es lanzar la API REST. Para hacer esto, en una terminal nos situamos en la carpeta del proyecto y escribimos los comandos:<br>
 `cd src/API_REST`<br>
 `uvicorn ApiRest:app --reload`<br>
 Ya tenemos la API REST en funcionamiento y lista para ser llamada.
 
-Lo siguiente que debemos hacer es: Abrir un nuevo terminal desde donde lanzar el comando que ejecutará la app. Como antes, nos situamos en la carpeta del proyecto en la terminal y escribimos el siguiente comando para situarnos en la carpeta donde está el "script" para lanzar la app.
+Lo siguiente que debemos hacer es: Abrir un nuevo terminal desde donde lanzar el comando que ejecutará la app. Como antes, nos situamos en la carpeta del proyecto en la terminal y escribimos el siguiente comando para situarnos en la carpeta donde está el "script" para lanzar la app.<br>
 `cd src/Logica`<br>
-Una vez situados en la carpeta del script, paso a explicar el funcionamiento de este sencillo comando:
+Una vez situados en la carpeta del script, paso a explicar el funcionamiento de este sencillo comando:<br>
 `python Main.py [argumentos]`<br>
-Donde está la parte de argumentos escribimos el report, de los 3 que pedía la prueba, que queremos lanzar (report1, report2 o report3). Por ejemplo:
--`python Main.py report2` Para generar el CSV del report 2 de la prueba.
--`python Main.py report1 report2 report3` Para generar los 3 CSVs de la prueba. (El orden de los argumentos no importa)
+Donde está la parte de argumentos escribimos el report, de los 3 que pedía la prueba, que queremos lanzar (report1, report2 o report3). Por ejemplo:<br>
+-`python Main.py report2` Para generar el CSV del report 2 de la prueba.<br>
+-`python Main.py report1 report2 report3` Para generar los 3 CSVs de la prueba. (El orden de los argumentos no importa)<br>
 Y con esto generaría los CSVs nombrados en la carpeta Data del proyecto que uso para almacenar todos los CSVs. Obviamente en un caso real, el CSV se guardaría en otra carpeta de la máquina que tu le indicases o directamente mapearíamos el CSV a una BD.
 
 # Sobre mi experiencia haciendo la prueba
@@ -32,9 +32,12 @@ El porqué de mi código lo comento en el mismo (aunque la guía del buen progra
 
 # Bibliografía que he usado para documentarme
 
--Para tratar argumentos de entrada por comandos: https://www.youtube.com/watch?v=4ZcX5Prfix0&ab_channel=kipunaec
--Para tratar los CSV como tablas: https://stackoverflow.com/questions/62480335/querying-csv-files-in-python-like-sql
--Como ordenar una tabla en Python: https://www.geeksforgeeks.org/how-to-sort-data-by-column-in-a-csv-file-in-python/
+-Para tratar argumentos de entrada por comandos:<br>
+ https://www.youtube.com/watch?v=4ZcX5Prfix0&ab_channel=kipunaec<br>
+-Para tratar los CSV como tablas:<br>
+ https://stackoverflow.com/questions/62480335/querying-csv-files-in-python-like-sql<br>
+-Como ordenar una tabla en Python:<br>
+ https://www.geeksforgeeks.org/how-to-sort-data-by-column-in-a-csv-file-in-python/<br>
 
 El resto de cosas que he aplicado son cosas que aprendí durante el desarrollo de mi proyecto en Python en la universidad.
 
